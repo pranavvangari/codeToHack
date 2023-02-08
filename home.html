@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block title %}Home Screen{% endblock %}
+
+{% block content %} 
+
+<h1>this is home screen</h1>
+
+<form method="POST">
+    <div>
+        <textarea name="bio" id="bio"></textarea>
+
+    </div>
+    
+
+    <br />
+
+    <div align="center">
+        <button type="submit" >Update Bio</button>
+    </div>
+</form>
+
+    {% for accounts in accounts %} 
+        <div class='course'>
+            {{ accounts['firstName'] + ' ' + accounts['lastName']}} 
+        
+        </div>
+
+    {% endfor %}
+
+    <br/>
+        <h1>other database</h1>
+
+    {% for names in namesToDisplay %}
+
+    <ul>
+        <li>{{ names.first_name }}</li>
+        
+    </ul>
+
+{% endfor %}
+
+
+{% endblock %}

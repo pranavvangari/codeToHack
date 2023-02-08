@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+{% block title %}Profile{% endblock %}
+
+{% block content %} 
+    <h1>Welcome to your Profile</h1>
+
+    <div class='info'>
+        <li>
+            {{ acc['Email'] }}
+        </li>
+        <li>
+            {{ acc['Password'] }}
+        </li>
+        <li>
+            {{ acc['firstName'] + ' ' + acc['lastName']}}
+        </li>
+        <li>
+            {{ acc['Grade'] }}
+        </li>
+        <li>
+            {{ acc['ID'] }}
+        </li>
+        <li>
+            {{ acc['Bio'] }}
+        </li>
+
+    </div>
+
+
+{% endblock %}
